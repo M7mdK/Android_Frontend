@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="light_blue">#1E88E5</color>        <!--Primary: purple_500 , FF6200EE-->
+    <color name="blue">#0d47a1</color>              <!--PrimaryV: purple_700 , FF3700B3 -->
+    <color name="orange">#e57b1e</color>            <!--Secondary: teal_200 , FF03DAC5 -->
+    <color name="light_orange">#eba22c</color>      <!--SecondaryV: teal_700 , FF018786 -->
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+</resources>
