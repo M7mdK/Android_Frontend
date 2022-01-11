@@ -4,11 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipToPadding="false"
     tools:context=".Entities.WindowActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,74 +21,87 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView_title1_w"
+            android:id="@+id/textView_title1_ww"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/act_window_name"
+            android:text="Window Name"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/window_name_txt_windowM"
+            android:id="@+id/window_name_text_window"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/textView_title2_w"
+            android:id="@+id/textView_title2_ww"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/act_window_room" />
+            android:text="Window Name" />
 
         <TextView
-            android:id="@+id/window_room_name_txt_window"
+            android:id="@+id/window_room_name_text_window"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/textView_title3_w"
+            android:id="@+id/textView_title3_ww"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/act_window_room_current_temp" />
+            android:text="Current Temperature" />
 
         <TextView
-            android:id="@+id/txt_window_current_temperature_window"
+            android:id="@+id/window_current_temp_text_window"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/textView_title4_w"
+            android:id="@+id/textView_title4_ww"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/act_window_room_target_temp" />
+            android:text="Target Temperature" />
 
         <TextView
-            android:id="@+id/txt_window_target_temperature_window"
+            android:id="@+id/window_target_temp_text_window"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
-            android:id="@+id/textView_title5_w"
+            android:id="@+id/textView_title5_ww"
             style="@style/text_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/act_window_status" />
+            android:text="Window Status" />
 
         <TextView
-            android:id="@+id/window_status_txt_window"
+            android:id="@+id/window_status_text_window"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/window_switch_status_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF6900"
+            android:onClick="switchWindowStatus"
+            android:text="Switch Status" />
+
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

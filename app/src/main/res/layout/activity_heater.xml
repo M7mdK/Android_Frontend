@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
-    tools:context=".Entities.WindowActivity">
+    tools:context=".Entities.HeaterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,6 +61,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/heater_switch_status_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF6900"
+            android:onClick="switchStatus"
+            android:text="Switch Status" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
