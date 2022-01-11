@@ -11,18 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Faircorp">
-        <activity android:name=".Lists.RoomsActivity"></activity>
-        <activity android:name=".Lists.BuildingsActivity" />
-        <activity android:name=".Lists.HeatersActivity" />
-        <activity android:name=".Entities.HeaterActivity" />
-        <activity android:name=".Entities.RoomActivity" />
-        <activity android:name=".Entities.BuildingActivity" />
+
+        <activity android:name=".Lists.RoomsActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Lists.BuildingsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Lists.HeatersActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Lists.WindowsActivity"
             android:parentActivityName=".MainActivity" />
+
+        <activity android:name=".Entities.HeaterActivity"
+            android:parentActivityName=".Lists.HeatersActivity"/>
+        <activity android:name=".Entities.RoomActivity"
+            android:parentActivityName=".Lists.RoomsActivity"/>
+        <activity android:name=".Entities.BuildingActivity"
+            android:parentActivityName=".Lists.BuildingsActivity"/>
         <activity
             android:name=".Entities.WindowActivity"
             android:parentActivityName=".Lists.WindowsActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

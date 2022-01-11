@@ -13,6 +13,7 @@ class BuildingsAdapter(private val listener: OnBuildingSelectedListener) : Recyc
 
     inner class BuildingViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.txt_building_name)
+        val outsideTemp: TextView = view.findViewById(R.id.txt_outside_temp)
     }
 
     private val items = mutableListOf<BuildingDto>()
@@ -35,6 +36,7 @@ class BuildingsAdapter(private val listener: OnBuildingSelectedListener) : Recyc
         val building = items[position]
         holder.apply {
             name.text = building.id.toString()
+            outsideTemp.text = "Outside Temperature: " + building.outsideTemperature.toString()
             itemView.setOnClickListener { listener.onBuildingSelected(building.id) }
         }
     }
