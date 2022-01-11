@@ -12,8 +12,8 @@ import com.example.faircorp.model.BuildingDto
 class BuildingsAdapter(private val listener: OnBuildingSelectedListener) : RecyclerView.Adapter<BuildingsAdapter.BuildingViewHolder>() {
 
     inner class BuildingViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.txt_building_name)
-        val outsideTemp: TextView = view.findViewById(R.id.txt_outside_temp)
+        val name: TextView = view.findViewById(R.id.txt_building_name_Item)
+        val outsideTemp: TextView = view.findViewById(R.id.txt_outside_temp_Item)
     }
 
     private val items = mutableListOf<BuildingDto>()

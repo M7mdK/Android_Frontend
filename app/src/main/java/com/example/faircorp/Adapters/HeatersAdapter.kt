@@ -12,9 +12,9 @@ import com.example.faircorp.model.HeaterDto
 class HeatersAdapter(private val listener: OnHeaterSelectedListener) : RecyclerView.Adapter<HeatersAdapter.HeaterViewHolder>() {
 
     inner class HeaterViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.txt_heater_name)
-        val room: TextView = view.findViewById(R.id.txt_heater_room)
-        val status: TextView = view.findViewById(R.id.txt_heater_status)
+        val name: TextView = view.findViewById(R.id.txt_heater_name_Item)
+        val room: TextView = view.findViewById(R.id.txt_heater_room_Item)
+        val status: TextView = view.findViewById(R.id.txt_heater_status_Item)
     }
 
     private val items = mutableListOf<HeaterDto>()

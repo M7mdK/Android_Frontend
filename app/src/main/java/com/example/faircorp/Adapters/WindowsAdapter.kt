@@ -12,9 +12,9 @@ import com.example.faircorp.model.WindowDto
 class WindowAdapter(private val listener: OnWindowSelectedListener) : RecyclerView.Adapter<WindowAdapter.WindowViewHolder>() {
 
     inner class WindowViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.window_name_txt)
-        val room: TextView = view.findViewById(R.id.txt_window_room)
-        val status: TextView = view.findViewById(R.id.txt_status)
+        val name: TextView = view.findViewById(R.id.window_name_txt_Item)
+        val room: TextView = view.findViewById(R.id.txt_window_room_Item)
+        val status: TextView = view.findViewById(R.id.txt_status_Item)
     }
 
     private val items = mutableListOf<WindowDto>()
