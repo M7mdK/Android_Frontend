@@ -37,13 +37,13 @@ open class BasicActivity : AppCompatActivity() {
                 Intent(Intent.ACTION_VIEW, Uri.parse("https://dev-mind.fr"))
             )
             R.id.menu_github -> startActivity(
-                Intent(Intent.ACTION_SENDTO, Uri.parse("https://github.com/M7mdK"))
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/M7mdK"))
             )
             R.id.menu_linkedin -> startActivity(
                 Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/mohamad-kassem-6950231b1/"))
             )
             R.id.menu_email -> startActivity(
-                Intent(Intent.ACTION_VIEW, Uri.parse("mailto://mohammad.kassem.1999@hotmail.com"))
+                Intent(Intent.ACTION_SENDTO, Uri.parse("mailto://mohammad.kassem.1999@hotmail.com"))
             )
 
         }

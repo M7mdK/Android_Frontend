@@ -54,7 +54,8 @@ class BuildingsActivity : BasicActivity(), OnBuildingSelectedListener {
     }
 
     override fun onBuildingSelected(id: Long) {
-        val intent = Intent(this, BuildingsActivity::class.java).putExtra(BUILDING_NAME_PARAM, id)
+        //val intent = Intent(this, BuildingsActivity::class.java).putExtra(BUILDING_NAME_PARAM, id)
+        val intent = Intent(this, RoomsActivity::class.java).putExtra(BUILDING_NAME_PARAM, id)
         startActivity(intent)
     }
 }
