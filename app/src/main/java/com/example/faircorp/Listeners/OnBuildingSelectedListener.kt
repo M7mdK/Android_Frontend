@@ -1,4 +1,5 @@
 package com.example.faircorp.Listeners
 
-class OnBuildingSelectedListener {
+interface OnBuildingSelectedListener {
+    fun onBuildingSelected(id: Long)
 }

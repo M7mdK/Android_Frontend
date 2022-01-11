@@ -3,15 +3,30 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/menu_buildings"
+        android:title="Buildings" />
+    <item
+        android:id="@+id/menu_rooms"
+        android:title="Rooms" />
+    <item
         android:id="@+id/menu_windows"
-        android:title="@string/menu_windows"
+        android:title="Windows"
         app:showAsAction="never" />
     <item
+        android:id="@+id/menu_heaters"
+        android:title="Heaters" />
+    <item
         android:id="@+id/menu_website"
-        android:title="@string/menu_website"
+        android:title="Visit Website"
         app:showAsAction="never" />
     <item
         android:id="@+id/menu_email"
-        android:title="@string/menu_email"
+        android:title="Send Email"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_github"
+        android:title="GitHub" />
+    <item
+        android:id="@+id/menu_linkedin"
+        android:title="LinkedIn" />
 </menu>

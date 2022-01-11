@@ -38,7 +38,7 @@ class WindowAdapter(private val listener: OnWindowSelectedListener) : RecyclerVi
         holder.apply {
             name.text = window.name
             status.text = window.status.toString()
-            room.text = window.room.name
+            room.text = window.roomName
             itemView.setOnClickListener { listener.onWindowSelected(window.id) }
         }
     }

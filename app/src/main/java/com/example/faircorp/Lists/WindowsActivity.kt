@@ -18,12 +18,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class WindowsActivity : BasicActivity(), OnWindowSelectedListener {
+class WindowsActivity : BasicActivity(), OnWindowSelectedListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_windows)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_windows)
         val adapter = WindowAdapter(this)
@@ -34,7 +35,7 @@ class WindowsActivity : BasicActivity(), OnWindowSelectedListener {
         recyclerView.adapter = adapter
 
         lifecycleScope.launch(context = Dispatchers.IO) {
-            runCatching { ApiServices().windowsApiService.findAll().execute() }
+            runCatching { ApiServices().windowApiService.findAll().execute() }
                 .onSuccess {
                     withContext(context = Dispatchers.Main) {
                         adapter.update(it.body() ?: emptyList())

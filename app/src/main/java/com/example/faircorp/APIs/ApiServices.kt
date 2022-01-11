@@ -5,9 +5,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 class ApiServices {
 
-    val SpringAPIURL = "http://app-af3be42b-9413-4b80-9e48-c8053e544af2.cleverapps.io"
-
-    val windowsApiService : WindowApiService by lazy {
+    val SpringAPIURL = "https://app-af3be42b-9413-4b80-9e48-c8053e544af2.cleverapps.io"
+    val windowApiService : WindowApiService by lazy {
         Retrofit.Builder()
                 .addConverterFactory(MoshiConverterFactory.create())
                 .baseUrl(SpringAPIURL + "/api/")

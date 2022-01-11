@@ -1,4 +1,5 @@
 package com.example.faircorp.Listeners
 
-class OnHeaterSelectedListener {
+interface OnHeaterSelectedListener {
+    fun onHeaterSelected(id: Long)
 }
