@@ -13,9 +13,9 @@ import com.example.faircorp.model.RoomDto
 
 class RoomAdapter(private val listener: OnRoomSelectedListener): RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
     inner class RoomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.txt_roomName)
-        val targetTemperature: TextView = view.findViewById(R.id.txt_target_temperature)
-        val currentTemperature: TextView = view.findViewById(R.id.txt_current_temperature)
+        val name: TextView = view.findViewById(R.id.txt_room_name)
+        val targetTemperature: TextView = view.findViewById(R.id.txt_target_temp)
+        val currentTemperature: TextView = view.findViewById(R.id.txt_current_temp)
     }
 
     private val items = mutableListOf<RoomDto>()
