@@ -8,7 +8,11 @@ import com.example.faircorp.Lists.HeatersActivity
 import com.example.faircorp.Lists.RoomsActivity
 import com.example.faircorp.Lists.WindowsActivity
 
+
+const val BUILDING_NAME_PARAM = "com.faircorp.buildingname.attribute"
+const val ROOM_NAME_PARAM = "com.faircorp.roomname.attribute"
 const val WINDOW_NAME_PARAM = "com.faircorp.windowname.attribute"
+const val HEATER_NAME_PARAM = "com.faircorp.heatername.attribute"
 
 class MainActivity : BasicActivity() {
 

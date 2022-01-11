@@ -7,23 +7,22 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.faircorp.*
-import com.example.faircorp.Entities.WindowActivity
 import com.example.faircorp.APIs.ApiServices
-import com.example.faircorp.model.WindowAdapter
-import com.example.faircorp.model.WindowService
+import com.example.faircorp.Adapters.WindowAdapter
+import com.example.faircorp.BasicActivity
+import com.example.faircorp.Entities.WindowActivity
+import com.example.faircorp.Listeners.OnWindowSelectedListener
+import com.example.faircorp.R
+import com.example.faircorp.WINDOW_NAME_PARAM
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class WindowsActivity : BasicActivity() , OnWindowSelectedListener {
-
-    val windowService = WindowService()
+class WindowsActivity : BasicActivity(), OnWindowSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_windows)
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_windows)
@@ -34,25 +33,15 @@ class WindowsActivity : BasicActivity() , OnWindowSelectedListener {
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
 
-        //adapter.update(windowService.findAll())
-
-        /*
-        runCatching { ApiServices().windowsApiService.findAll().execute() }
-            .onSuccess { adapter.update(it.body() ?: emptyList()) }
-            .onFailure {
-                Toast.makeText(this, "Error on windows loading $it", Toast.LENGTH_LONG).show()
-            }
-        */
-
-        lifecycleScope.launch(context = Dispatchers.IO) { // (1)
-            runCatching { ApiServices().windowsApiService.findAll().execute() } // (2)
+        lifecycleScope.launch(context = Dispatchers.IO) {
+            runCatching { ApiServices().windowsApiService.findAll().execute() }
                 .onSuccess {
-                    withContext(context = Dispatchers.Main) { // (3)
+                    withContext(context = Dispatchers.Main) {
                         adapter.update(it.body() ?: emptyList())
                     }
                 }
                 .onFailure {
-                    withContext(context = Dispatchers.Main) { // (3)
+                    withContext(context = Dispatchers.Main) {
                         Toast.makeText(
                             applicationContext,
                             "Error on windows loading $it",
@@ -66,8 +55,5 @@ class WindowsActivity : BasicActivity() , OnWindowSelectedListener {
     override fun onWindowSelected(id: Long) {
         val intent = Intent(this, WindowActivity::class.java).putExtra(WINDOW_NAME_PARAM, id)
         startActivity(intent)
-
     }
-
-
 }

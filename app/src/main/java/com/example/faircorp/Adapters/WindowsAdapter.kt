@@ -1,14 +1,15 @@
-package com.example.faircorp.model
+package com.example.faircorp.Adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.faircorp.OnWindowSelectedListener
+import com.example.faircorp.Listeners.OnWindowSelectedListener
 import com.example.faircorp.R
+import com.example.faircorp.model.WindowDto
 
-class WindowAdapter(val listener: OnWindowSelectedListener) : RecyclerView.Adapter<WindowAdapter.WindowViewHolder>() {
+class WindowAdapter(private val listener: OnWindowSelectedListener) : RecyclerView.Adapter<WindowAdapter.WindowViewHolder>() {
 
     inner class WindowViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.txt_window_name)
@@ -39,19 +40,12 @@ class WindowAdapter(val listener: OnWindowSelectedListener) : RecyclerView.Adapt
             status.text = window.status.toString()
             room.text = window.room.name
             itemView.setOnClickListener { listener.onWindowSelected(window.id) }
-
-            if(status.text.equals("OPEN"))
-                status.setTextAppearance(R.style.on_style)
-            else if(status.text.equals("CLOSED"))
-                status.setTextAppearance(R.style.off_style)
         }
     }
-
     override fun onViewRecycled(holder: WindowViewHolder) {
         super.onViewRecycled(holder)
         holder.apply {
             itemView.setOnClickListener(null)
         }
-
     }
 }
