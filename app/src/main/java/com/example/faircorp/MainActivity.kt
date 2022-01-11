@@ -1,11 +1,9 @@
 package com.example.faircorp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.Toast
+import com.example.faircorp.Lists.WindowsActivity
 
 const val WINDOW_NAME_PARAM = "com.faircorp.windowname.attribute"
 
@@ -28,9 +26,10 @@ class MainActivity : BasicActivity() {
         startActivity(intent)
     }*/
 
+/*
     fun openWindowsList(view : View){
         val intent = Intent(this, WindowsActivity::class.java)
         startActivity(intent)
     }
-
+*/
 }

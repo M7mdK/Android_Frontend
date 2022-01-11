@@ -1,4 +1,4 @@
-package com.example.faircorp.model
+package com.example.faircorp.APIs
 
 import retrofit2.http.*
 import com.example.faircorp.model.WindowDto

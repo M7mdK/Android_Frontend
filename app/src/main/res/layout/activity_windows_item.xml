@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/txt_status"
-        style="@style/TextAppearance.AppCompat.Large"
+        style="@style/text_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -22,6 +22,7 @@
 
     <TextView
         android:id="@+id/txt_window_name"
+        style="@style/text_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -35,7 +36,6 @@
 
     <TextView
         android:id="@+id/txt_window_room"
-        style="@style/TextAppearance.AppCompat.Small"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

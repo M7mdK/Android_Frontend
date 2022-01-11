@@ -12,9 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Faircorp">
 
-        <activity android:name=".WindowsActivity" android:parentActivityName=".MainActivity" />
+        <activity android:name=".Lists.WindowsActivity" android:parentActivityName=".MainActivity" />
 
-        <activity android:name=".WindowActivity" android:parentActivityName=".WindowsActivity" />
+        <activity android:name=".Entities.WindowActivity" android:parentActivityName=".Lists.WindowsActivity" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -1,8 +1,10 @@
-package com.example.faircorp
+package com.example.faircorp.Entities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.faircorp.BasicActivity
+import com.example.faircorp.R
+import com.example.faircorp.WINDOW_NAME_PARAM
 import com.example.faircorp.model.WindowService
 
 class WindowActivity : BasicActivity() {

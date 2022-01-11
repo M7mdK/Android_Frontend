@@ -1,14 +1,15 @@
-package com.example.faircorp
+package com.example.faircorp.Lists
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.faircorp.model.ApiServices
+import com.example.faircorp.*
+import com.example.faircorp.Entities.WindowActivity
+import com.example.faircorp.APIs.ApiServices
 import com.example.faircorp.model.WindowAdapter
 import com.example.faircorp.model.WindowService
 import kotlinx.coroutines.Dispatchers

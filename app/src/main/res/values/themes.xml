@@ -2,16 +2,16 @@
     <!-- Base application theme. -->
     <style name="Theme.Faircorp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/light_blue</item>
-        <item name="colorPrimaryVariant">@color/blue</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/orange</item>
-        <item name="colorSecondaryVariant">@color/light_orange</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorPrimary">#808080</item>
+        <item name="colorPrimaryVariant">#000000</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <!-- My Theme: -->
+        <item name="android:windowBackground">@drawable/background_img</item>
+        <item name="android:textColor">#808080</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
 </resources>
