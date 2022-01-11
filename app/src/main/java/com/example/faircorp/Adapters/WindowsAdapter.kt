@@ -37,9 +37,13 @@ class WindowAdapter(private val listener: OnWindowSelectedListener) : RecyclerVi
         val window = items[position]
         holder.apply {
             name.text = window.name
-            status.text = window.status.toString()
+            status.text = window.windowStatus.toString()
             room.text = window.roomName
             itemView.setOnClickListener { listener.onWindowSelected(window.id) }
+            if(status.text.equals("OPEN"))
+                status.setTextAppearance(R.style.on_style)
+            else if(status.text.equals("CLOSED"))
+                status.setTextAppearance(R.style.off_style)
         }
     }
     override fun onViewRecycled(holder: WindowViewHolder) {
